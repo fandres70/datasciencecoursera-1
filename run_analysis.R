@@ -125,8 +125,6 @@ splits <- split(MeanStdExtract, list(MeanStdExtract$subject.id,
                                      MeanStdExtract$activity))
 length(splits)
 
-x <- splits[[1]]
-
 Tidy.Summary <- do.call(rbind, lapply(splits,
                   function(x)
                   {
@@ -142,6 +140,9 @@ Tidy.Summary <- Tidy.Summary[order(Tidy.Summary$subject.id, Tidy.Summary$activit
 
 # This file is the one to be submitted as part of the assignment
 write.csv(Tidy.Summary, "Samsung-Tidy-Summary.csv", row.names=FALSE)
+
+# Coursera only accepts txt filetype, so write as tab-delimited, too.
+write.table(Tidy.Summary, "Samsung-Tidy-Summary.txt", row.names=FALSE, sep="\t")
 
 ################################################################################
 ### Create descriptive stats to show various counts. Useful for double-checking.
