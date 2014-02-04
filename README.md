@@ -9,9 +9,9 @@ The purpose of the project was to collect, work with, and clean the dataset rela
 
 The file **getdata\_projectfiles\_UCI HAR Dataset.zip** was downloaded from the class site and a directory structure with files were unzipped into the **UCI HAR Dataset** directory.
 
-Files in the unzipped directory included a **README.txt** with general information, and two files describing the features in the data, **features.txt** and **feature\s_info.txt**.  An **activity\_labels.txt** file gave text descriptions for the six activities that were studied.
+Files in the unzipped directory included a **README.txt** with general information, and two files describing the features in the data, **features.txt** and **features\_info.txt**.  An **activity\_labels.txt** file gave text descriptions for the six activities that were studied.
 
-**test** and **train** subdirectories each had three files and an **Inertial Signals** directory.  As described in the README.txt file, The **subject_xxxx.txt** files defined the subject ids and the **y_xxxx.txt** files defined the activities for which measurments were made and recorded in the **X_xxx.txt** files.  The **xxxx** in these filenames was either **test** or **train**.
+**test** and **train** subdirectories each had three files and an **Inertial Signals** directory.  As described in the README.txt file, The **subject_xxxx.txt** files defined the subject ids and the **y_xxxx.txt** files defined the activities for which measurements were made and recorded in the **X_xxx.txt** files.  The **xxxx** in these filenames was either **test** or **train**.
 
 The raw data in the **Inertial** directories were not needed for the programming assignment.
 
@@ -113,7 +113,7 @@ dim(combined.data)
 ## [1] 10299   564
 ```
 
-Let's cleanup feature names to be more R "friendly" (__4. Appropriately label the dataset with desciptive__ names):
+Let's cleanup feature names to be more R "friendly" (__4. Appropriately label the dataset with descriptive__ names):
 
 
 ```r
@@ -357,7 +357,7 @@ table(combined.data$subject.id, combined.data$activity, combined.data$source)
 Code Book
 ---------
 
-The "X" files contained 561 features from analysis of the Samsung data for 30 subjects and 6 activites. The 30 subjects were divided into **test* and **train** subsets in the original data. 
+The "X" files contained 561 features from analysis of the Samsung data for 30 subjects and 6 activities. The 30 subjects were divided into **test* and **train** subsets in the original data. 
 
 The **combined.data** object contained three labels and these 561 features for all 30 subjects and 6 activities.
 
@@ -453,4 +453,4 @@ Per the homework assignment, only the mean (mean) and standard deviation (std) e
 
 
 
-efg, 2014-02-02
+efg, 2014-02-03
